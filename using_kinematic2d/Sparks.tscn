@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sparks.gd" type="Script" id=1]
+
+[node name="Sparks" type="CPUParticles2D"]
+emitting = false
+amount = 24
+lifetime = 0.2
+one_shot = true
+spread = 180.0
+initial_velocity = 548.39
+scale_amount = 3.0
+color = Color( 0.972549, 0.964706, 0.4, 1 )
+script = ExtResource( 1 )
