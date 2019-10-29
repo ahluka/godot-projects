@@ -8,14 +8,26 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Button",
+"class": "TestButton",
+"language": "GDScript",
+"path": "res://TestTool.gd"
+}, {
+"base": "TextureRect",
+"class": "TestClass",
+"language": "GDScript",
+"path": "res://Test.gd"
+} ]
 _global_script_class_icons={
-
+"TestButton": "res://icon.png",
+"TestClass": "res://icon.png"
 }
 
 [application]
 
 config/name="Move 2d"
+run/main_scene="res://TestLevel.tscn"
 config/icon="res://icon.png"
 
 [input]

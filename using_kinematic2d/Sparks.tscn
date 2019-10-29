@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Sparks.gd" type="Script" id=1]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.761589 )
+colors = PoolColorArray( 1, 0.992126, 0.496094, 1, 1, 1, 1, 0 )
 
 [node name="Sparks" type="CPUParticles2D"]
 emitting = false
@@ -8,7 +12,9 @@ amount = 24
 lifetime = 0.2
 one_shot = true
 spread = 180.0
-initial_velocity = 548.39
-scale_amount = 3.0
-color = Color( 0.972549, 0.964706, 0.4, 1 )
+initial_velocity = 400.0
+radial_accel = 100.0
+scale_amount = 3.5
+scale_amount_random = 0.5
+color_ramp = SubResource( 1 )
 script = ExtResource( 1 )
