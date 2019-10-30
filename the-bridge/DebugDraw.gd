@@ -16,4 +16,20 @@ func _physics_process(delta):
 
 
 func _draw():
+	draw_loc_rot()
+	draw_target_vec()
+
+
+func draw_loc_rot():
+	var p = get_parent()
+	var strpos = Vector2(0, -50)
+	var strx = str(p.position.x)
+	var stry = str(p.position.y)
+	var strrot = str(p.rotation_degrees)
+
+	draw_string(debug_font, strpos, strx + "," + stry)
+	draw_string(debug_font, strpos + Vector2(0, -20), strrot)
+
+
+func draw_target_vec():
 	draw_line(Vector2(0,0), get_local_mouse_position(), Color(1,0,0), 1)
