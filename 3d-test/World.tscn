@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="World" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.2535 )
+current = true
