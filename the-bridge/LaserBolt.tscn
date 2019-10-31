@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/space-shooter/spritesheets/laser-bolts.png" type="Texture" id=1]
+[ext_resource path="res://LaserBolt.gd" type="Script" id=2]
+[ext_resource path="res://assets/sfx/laser.wav" type="AudioStream" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 6.60676, 15.147, 4.49052, 17.9621 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 11.6588, 4.56013 )
+
+[node name="LaserBolt" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+texture = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="LifetimeTimer" type="Timer" parent="."]
+autostart = true

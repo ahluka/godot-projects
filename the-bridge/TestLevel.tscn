@@ -1,32 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/space_background_pack/layers/parallax-space-backgound.png" type="Texture" id=2]
-
-[sub_resource type="Shader" id=1]
-code = "shader_type canvas_item;
-
-uniform vec2 direction = vec2(0.0, 1.0);
-uniform float speed_scale = 0.05;
-
-void fragment() {
-//	vec2 offset = direction * TIME * speed_scale;
-//	COLOR = texture(TEXTURE, UV + offset);
-	COLOR = texture(TEXTURE, UV);
-}"
-
-[sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 1 )
-shader_param/direction = Vector2( 0, 1 )
-shader_param/speed_scale = 0.05
+[ext_resource path="res://TestLevel.gd" type="Script" id=2]
 
 [node name="TestLevel" type="Node2D"]
-
-[node name="Background" type="Sprite" parent="."]
-material = SubResource( 2 )
-position = Vector2( 510, 300 )
-scale = Vector2( 3.76, 3.76 )
-texture = ExtResource( 2 )
+script = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 527.825, 408.112 )

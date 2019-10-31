@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/fighter1.obj-97c3c2d22e38f136ce5727531af547dc.mesh"
+
+[deps]
+
+files=[ "res://.import/fighter1.obj-97c3c2d22e38f136ce5727531af547dc.mesh" ]
+
+source_file="res://fighter/fighter1.obj"
+dest_files=[ "res://.import/fighter1.obj-97c3c2d22e38f136ce5727531af547dc.mesh", "res://.import/fighter1.obj-97c3c2d22e38f136ce5727531af547dc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

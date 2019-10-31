@@ -1,7 +1,21 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fighter/fighter1.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="CapsuleShape" id=1]
 
 [node name="World" type="Spatial"]
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.2535 )
 current = true
+
+[node name="KinematicBody" type="KinematicBody" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="KinematicBody"]
+transform = Transform( -0.0104718, 0, -0.999945, 0, 1, 0, 0.999945, 0, -0.0104718, 0, 0.114778, 0.799738 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
+shape = SubResource( 1 )

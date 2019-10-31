@@ -6,13 +6,18 @@
 
 extends Node
 
+# Members
 var current_scene = null
+
+var player_persist = {
+	health = 100,
+}
 
 
 func _ready():
 #	var root = get_tree().get_root()
 #	current_scene = root.get_child(root.get_child_count() - 1)
-
+	randomize()
 	load_test_level()
 
 
@@ -26,9 +31,7 @@ func load_test_level():
 #	deferred so we don't crash trying to free() an in-use scene.
 func __switch_scene(path):
 	current_scene.free()
-
-	var scn = ResourceLoader.load(path)
-	current_scene = scn.instance()
+	current_scene = ResourceLoader.load(path).instance()
 
 	get_tree().get_root().add_child(current_scene)
 	get_tree().set_current_scene(current_scene)
