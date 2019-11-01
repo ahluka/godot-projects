@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/blueship.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -15,50 +15,8 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Gradient" id=4]
+[sub_resource type="Gradient" id=2]
 colors = PoolColorArray( 0, 1, 1, 1, 0, 1, 1, 0.235294 )
-
-[sub_resource type="Shader" id=2]
-code = "shader_type canvas_item;
-
-uniform vec2 scroll_direction = vec2(0,0);
-uniform float speed_scale  = 0.1;
-uniform vec2 screen_res;
-
-float random (vec2 st) {
-    return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123);
-}
-
-vec4 starfield(in vec4 fragcoord, in float time) {
-	// Current pixel in normalised coords
-	vec2 st = fragcoord.xy / screen_res.xy;
-	st *= 500.0;
-	float rnd = step(random(floor(st)), 0.001);
-	vec2 offset = scroll_direction * time * speed_scale;
-
-	return vec4(vec3(rnd), 1.0);
-}
-
-void fragment() {
-//	vec2 dir = normalize(scroll_direction);
-
-	// This doesn't work. Doesn't draw when dir == 0 and changes erratically
-	// as the vec moves to face the mouse.
-//	vec2 ofs = dir * TIME * speed_scale;
-//	COLOR = texture(TEXTURE, UV + ofs);
-
-	COLOR = texture(TEXTURE, UV);
-	COLOR.a = 0.5;
-}
-
-//	vec2 offset = direction * TIME * speed_scale;
-//	COLOR = texture(TEXTURE, UV + offset);"
-
-[sub_resource type="ShaderMaterial" id=3]
-shader = SubResource( 2 )
-shader_param/scroll_direction = Vector2( 0, 0 )
-shader_param/speed_scale = 0.1
-shader_param/screen_res = null
 
 [sub_resource type="CircleShape2D" id=5]
 radius = 900.0
@@ -87,7 +45,7 @@ initial_velocity = 500.0
 initial_velocity_random = 0.4
 scale_amount = 12.0
 scale_amount_random = 1.0
-color_ramp = SubResource( 4 )
+color_ramp = SubResource( 2 )
 
 [node name="ExhaustBoost" type="CPUParticles2D" parent="AnimatedSprite"]
 position = Vector2( -97.5349, 0 )
@@ -129,7 +87,6 @@ offset = Vector2( 512, 512 )
 transform = Transform2D( 1, 0, 0, 1, 512, 512 )
 
 [node name="Starfield" type="Sprite" parent="StarfieldLayer"]
-material = SubResource( 3 )
 position = Vector2( 0, 0.598755 )
 texture = ExtResource( 6 )
 

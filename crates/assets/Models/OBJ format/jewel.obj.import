@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/jewel.obj-b32ec2c199aeb5e50216df14ef9cbd61.mesh"
+
+[deps]
+
+files=[ "res://.import/jewel.obj-b32ec2c199aeb5e50216df14ef9cbd61.mesh" ]
+
+source_file="res://assets/Models/OBJ format/jewel.obj"
+dest_files=[ "res://.import/jewel.obj-b32ec2c199aeb5e50216df14ef9cbd61.mesh", "res://.import/jewel.obj-b32ec2c199aeb5e50216df14ef9cbd61.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

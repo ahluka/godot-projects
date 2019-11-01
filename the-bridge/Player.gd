@@ -1,6 +1,7 @@
 # Player
 #
 # Player controller.
+# 
 # Things that need changing / fixing:
 #	* Sfx code is mixed into input handling and other places. Could be moved
 #	  into its own node (i.e. class) to spin up individual AudioStreamPlayers
@@ -29,14 +30,7 @@ var boosting = false
 var thrusting = false
 
 
-func prepare_starfield_tex():
-	var tex = $StarfieldLayer/Starfield.texture
-	var res = Vector2(tex.get_width(), tex.get_height())
-	$StarfieldLayer/Starfield.material.set_shader_param("screen_res", res)
-
-
 func _ready():
-#	prepare_starfield_tex()
 	$ThrustStream.volume_db = -10
 	$BoostStream.volume_db = -10
 

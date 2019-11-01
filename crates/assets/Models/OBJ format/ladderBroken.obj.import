@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ladderBroken.obj-de502f61d2aa326843e1fb557c028efb.mesh"
+
+[deps]
+
+files=[ "res://.import/ladderBroken.obj-de502f61d2aa326843e1fb557c028efb.mesh" ]
+
+source_file="res://assets/Models/OBJ format/ladderBroken.obj"
+dest_files=[ "res://.import/ladderBroken.obj-de502f61d2aa326843e1fb557c028efb.mesh", "res://.import/ladderBroken.obj-de502f61d2aa326843e1fb557c028efb.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

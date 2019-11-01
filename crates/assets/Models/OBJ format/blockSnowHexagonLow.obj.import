@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/blockSnowHexagonLow.obj-a6eeee0fa6f687a565b8eeb5c848280e.mesh"
+
+[deps]
+
+files=[ "res://.import/blockSnowHexagonLow.obj-a6eeee0fa6f687a565b8eeb5c848280e.mesh" ]
+
+source_file="res://assets/Models/OBJ format/blockSnowHexagonLow.obj"
+dest_files=[ "res://.import/blockSnowHexagonLow.obj-a6eeee0fa6f687a565b8eeb5c848280e.mesh", "res://.import/blockSnowHexagonLow.obj-a6eeee0fa6f687a565b8eeb5c848280e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
